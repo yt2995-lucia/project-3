@@ -227,6 +227,10 @@ Ignore what the word says — respond to the ink color only.
         ss.current_trial      = 0
         ss.results            = []
         ss.last_rendered      = -1
+        # Fix button order once for the entire experiment (never shuffled again)
+        fixed_order = COLOR_NAMES[:]
+        random.shuffle(fixed_order)
+        ss.btn_order          = fixed_order
         ss.stage              = "trial"
         st.rerun()
 
@@ -249,9 +253,7 @@ elif ss.stage == "trial":
     if ss.last_rendered != idx:
         ss.trial_start   = time.perf_counter()
         ss.last_rendered = idx
-        order = COLOR_NAMES[:]
-        random.shuffle(order)
-        ss.btn_order = order
+        # btn_order is fixed for the whole experiment — do NOT shuffle here
 
     # Progress bar
     st.markdown(
