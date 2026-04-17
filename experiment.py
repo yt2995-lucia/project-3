@@ -48,7 +48,7 @@ COLORS: dict[str, str] = {
     "GREEN":  "#43A047",
     "YELLOW": "#F9A825",
     "PURPLE": "#8E24AA",
-    "ORANGE": "#FB8C00",
+    "PINK":   "#E91E63",
 }
 COLOR_NAMES = list(COLORS.keys())
 NUM_TRIALS  = 40   # each participant does 40 trials of ONE condition only
@@ -64,7 +64,7 @@ st.markdown("""
   button[aria-label="GREEN"]  { background:#43A047!important; color:white!important;  font-weight:bold!important; border:none!important; }
   button[aria-label="YELLOW"] { background:#F9A825!important; color:#333!important;   font-weight:bold!important; border:none!important; }
   button[aria-label="PURPLE"] { background:#8E24AA!important; color:white!important;  font-weight:bold!important; border:none!important; }
-  button[aria-label="ORANGE"] { background:#FB8C00!important; color:white!important;  font-weight:bold!important; border:none!important; }
+  button[aria-label="PINK"]   { background:#E91E63!important; color:white!important;  font-weight:bold!important; border:none!important; }
 
   .stroop-word {
     font-size: 96px; font-weight: 900; text-align: center;
